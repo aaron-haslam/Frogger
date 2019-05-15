@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang = "en-US">
+<head>
+    <meta charset = "UTF-8">
+    <title>Frogger</title>
+    
+    <link rel = "stylesheet" type = "text/css" href = "styles/game.css">
+</head>
+<body onload = "MyGame.game.initialize();" style="background-color:black;">
+    <h1 id="title">Frogger</h1>
+    <div id = "game">
+        <div id = "main-menu" class = "screen">
+            <ul class = "menu">
+                <li><button id = "id-new-game">New&nbsp;Game</button></li>
+                <li><button id = "id-high-scores">High&nbsp;Scores</button></li>
+                <li><button id = "id-help">Controls</button></li>
+                <li><button id = "id-about">About</button></li>
+            </ul>
+        </div>
+        <div id = "game-play" class = "screen">
+            <canvas id = "id-canvas" width = "780" height = "780"></canvas>
+            <audio src='assets/sounds/frogger.mp3' autoplay loop volume = '0.1'></audio>
+        </div>
+        <div id = "high-scores" class = "screen">
+            <h1>High Scores</h1>
+            <ol>
+                <li id="first">0</li>
+                <li id="second">0</li>
+                <li id="third">0</li>
+                <li id="fourth">0</li>
+                <li id="fifth">0</li>
+            </ol>
+            <ul class = "menu">
+                <li><button id = "id-high-scores-back">Back</button></li>
+            </ul>
+        </div>
+        <div id = "help" class = "screen">
+            <h1>Controls</h1>
+            <p><button id="changeMoveUp">Change</button> Move Up: <text id="controlUp"></text></p>
+            <p><button id="changeMoveDown">Change</button> Move Down: <text id="controlDown"></text></p>
+            <p><button id="changeMoveLeft">Change</button> Move Left: <text id="controlLeft"></text></p>
+            <p><button id="changeMoveRight">Change</button> Move Right: <text id="controlRight"></text></p>
+            <ul class = "menu">
+                <li><button id = "id-help-back">Back</button></li>
+            </ul>
+        </div>
+        <div id = "about" class = "screen">
+            <h1>About</h1>
+            <p>This game was created by</p>
+            <p>Aaron Haslam</p>
+            <ul class = "menu">
+                <li><button id = "id-about-back">Back</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let MyGame = {
+            screens : {},
+            input: {},
+            objects: {},
+            render: {},
+            systems: {},
+        };
+    </script>
+    
+    <!-- <script data-main = "scripts/loader" src = "scripts/require.js"></script> -->
+
+
+
+
+    <script src="scripts/objects/background.js"></script>
+    <script src="scripts/objects/frog.js"></script>
+    <script src="scripts/objects/vehicle.js"></script>
+    <script src="scripts/objects/log.js"></script>
+
+
+
+    <script src = "scripts/render/core.js"></script>
+    <script src= "scripts/render/hud.js"></script>
+    <script src= "scripts/render/background.js"></script>
+    <script src= "scripts/render/frog.js"></script>
+    <script src= "scripts/render/vehicle.js"></script>
+    <script src= "scripts/render/log.js"></script>
+    <script src= "scripts/render/particle-system.js"></script>
+    
+
+
+
+    <script src = "scripts/system/input-keyboard.js"></script>
+    <script src = "scripts/system/particle-system.js"></script>
+    <script src = "scripts/system/random.js"></script>
+
+
+
+
+    <script src = "scripts/menu/game.js"></script>
+    <script src = "scripts/menu/mainmenu.js"></script>
+    <script src = "scripts/menu/highscores.js"></script>
+    <script src = "scripts/menu/help.js"></script>
+    <script src = "scripts/menu/about.js"></script>
+
+
+    <script src = "scripts/gameplay.js"></script>
+
+
+</body>
+</html>
